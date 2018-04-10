@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1- UI", "1- UI", "{8BFBD963-6BA3-4466-A498-7E46CD4A578E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2- Domain", "2- Domain", "{E0D70BD8-FF44-4F15-B687-C261A1F334F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Infrastructure", "3- Infrastructure", "{C7D23D3A-42C2-4315-ACF5-ED71A8CF83D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRB.AppplicationCore", "src\SGRB.AppplicationCore\SGRB.AppplicationCore.csproj", "{C78E812D-D06C-44B8-8113-8B1529D925D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRB.Infrastructure", "src\SGRB.Infrastructure\SGRB.Infrastructure.csproj", "{8D0484D6-F578-4A24-98BC-A93E2755D975}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C78E812D-D06C-44B8-8113-8B1529D925D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C78E812D-D06C-44B8-8113-8B1529D925D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C78E812D-D06C-44B8-8113-8B1529D925D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C78E812D-D06C-44B8-8113-8B1529D925D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D0484D6-F578-4A24-98BC-A93E2755D975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D0484D6-F578-4A24-98BC-A93E2755D975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D0484D6-F578-4A24-98BC-A93E2755D975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D0484D6-F578-4A24-98BC-A93E2755D975}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C78E812D-D06C-44B8-8113-8B1529D925D5} = {E0D70BD8-FF44-4F15-B687-C261A1F334F1}
+		{8D0484D6-F578-4A24-98BC-A93E2755D975} = {C7D23D3A-42C2-4315-ACF5-ED71A8CF83D8}
+	EndGlobalSection
+EndGlobal
