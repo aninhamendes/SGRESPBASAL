@@ -9,9 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2- Domain", "2- Domain", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Infrastructure", "3- Infrastructure", "{C7D23D3A-42C2-4315-ACF5-ED71A8CF83D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRB.AppplicationCore", "src\SGRB.AppplicationCore\SGRB.AppplicationCore.csproj", "{C78E812D-D06C-44B8-8113-8B1529D925D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SGRB.AppplicationCore", "src\SGRB.AppplicationCore\SGRB.AppplicationCore.csproj", "{C78E812D-D06C-44B8-8113-8B1529D925D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRB.Infrastructure", "src\SGRB.Infrastructure\SGRB.Infrastructure.csproj", "{8D0484D6-F578-4A24-98BC-A93E2755D975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SGRB.Infrastructure", "src\SGRB.Infrastructure\SGRB.Infrastructure.csproj", "{8D0484D6-F578-4A24-98BC-A93E2755D975}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGRB.UI.Web", "src\SGRB.UI.Web\SGRB.UI.Web.csproj", "{3AE5899A-2D48-431B-959B-9C0BDBAEB78F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8D0484D6-F578-4A24-98BC-A93E2755D975}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D0484D6-F578-4A24-98BC-A93E2755D975}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D0484D6-F578-4A24-98BC-A93E2755D975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE5899A-2D48-431B-959B-9C0BDBAEB78F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE5899A-2D48-431B-959B-9C0BDBAEB78F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE5899A-2D48-431B-959B-9C0BDBAEB78F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE5899A-2D48-431B-959B-9C0BDBAEB78F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,5 +40,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C78E812D-D06C-44B8-8113-8B1529D925D5} = {E0D70BD8-FF44-4F15-B687-C261A1F334F1}
 		{8D0484D6-F578-4A24-98BC-A93E2755D975} = {C7D23D3A-42C2-4315-ACF5-ED71A8CF83D8}
+		{3AE5899A-2D48-431B-959B-9C0BDBAEB78F} = {8BFBD963-6BA3-4466-A498-7E46CD4A578E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {338397BA-46C5-453E-AF9D-676B0ECF5C59}
 	EndGlobalSection
 EndGlobal
