@@ -12,5 +12,8 @@ namespace SGRB.AppplicationCore.Entity
         }
 
         public int PesquisadorId { get; set; }
+        public string Nome { get; set; }
+        public string InstituicaoDeEnsino { get; set; }
+
     }
 }
