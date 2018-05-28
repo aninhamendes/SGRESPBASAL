@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SGRB.UI.Web.Data;
 using SGRB.UI.Web.Models;
 using SGRB.UI.Web.Services;
+using SGRB.Infrastructure.Data;
 
 namespace SGRB.UI.Web
 {
@@ -32,6 +33,10 @@ namespace SGRB.UI.Web
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddDbContext<RBasalContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
