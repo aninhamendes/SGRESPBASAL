@@ -11,9 +11,10 @@ using System;
 namespace SGRB.Infrastructure.Migrations
 {
     [DbContext(typeof(RBasalContext))]
-    partial class RBasalContextModelSnapshot : ModelSnapshot
+    [Migration("20180529022148_ConfigClasses")]
+    partial class ConfigClasses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

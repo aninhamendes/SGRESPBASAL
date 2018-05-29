@@ -6,6 +6,8 @@ namespace SGRB.AppplicationCore.Entity
 {
     public class ProcessamentoAmostra
     {
+        public int ProcessamentoAmostraId { get; set; }
+
         public int Peneira { get; set; }
 
         public string Solucoes { get; set; }

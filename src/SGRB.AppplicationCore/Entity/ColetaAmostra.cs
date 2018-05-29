@@ -6,6 +6,8 @@ namespace SGRB.AppplicationCore.Entity
 {
    public class ColetaAmostra
     {
+        public int ColetaAmostraId { get; set; }
+
         public DateTime DataColeta { get; set; }
 
         public int Profundidade { get; set; }

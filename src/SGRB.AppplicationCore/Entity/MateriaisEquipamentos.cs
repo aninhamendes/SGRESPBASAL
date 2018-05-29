@@ -6,6 +6,7 @@ namespace SGRB.AppplicationCore.Entity
 {
     public class MateriaisEquipamentos
     {
+        public int MateriaisEquipamentosId { get; set; }
         public string MateriaisUtilizados { get; set; }
     }
 }
