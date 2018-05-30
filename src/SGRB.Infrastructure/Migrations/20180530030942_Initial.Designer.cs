@@ -11,8 +11,8 @@ using System;
 namespace SGRB.Infrastructure.Migrations
 {
     [DbContext(typeof(RBasalContext))]
-    [Migration("20180529022148_ConfigClasses")]
-    partial class ConfigClasses
+    [Migration("20180530030942_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

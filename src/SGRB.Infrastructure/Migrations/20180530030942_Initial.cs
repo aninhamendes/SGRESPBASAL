@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace SGRB.Infrastructure.Migrations
 {
-    public partial class AdicaoClasses : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,12 +27,12 @@ namespace SGRB.Infrastructure.Migrations
                 {
                     CaracterizacaoAreaId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Cidade = table.Column<string>(nullable: true),
-                    DescricaoAmbiente = table.Column<string>(nullable: true),
-                    TamanhoPropriedade = table.Column<double>(nullable: false),
-                    TipoArea = table.Column<string>(nullable: true),
-                    TipoClima = table.Column<string>(nullable: true),
-                    TipoSolo = table.Column<string>(nullable: true)
+                    Cidade = table.Column<string>(type: "varchar(100)", nullable: false),
+                    DescricaoAmbiente = table.Column<string>(type: "varchar(10000)", nullable: false),
+                    TamanhoPropriedade = table.Column<double>(type: "varchar(100)", nullable: false),
+                    TipoArea = table.Column<string>(type: "varchar(100)", nullable: false),
+                    TipoClima = table.Column<string>(type: "varchar(100)", nullable: false),
+                    TipoSolo = table.Column<string>(type: "varchar(100)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,14 +45,14 @@ namespace SGRB.Infrastructure.Migrations
                 {
                     ColetaAmostraId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Armazenamento = table.Column<string>(nullable: true),
-                    DataColeta = table.Column<DateTime>(nullable: false),
-                    PesoAmostra = table.Column<double>(nullable: false),
-                    Profundidade = table.Column<int>(nullable: false),
-                    Sazonalidade = table.Column<bool>(nullable: false),
-                    TempodeRepouso = table.Column<int>(nullable: false),
-                    TipodeEcossistema = table.Column<string>(nullable: true),
-                    TipodeTratamento = table.Column<string>(nullable: true)
+                    Armazenamento = table.Column<string>(type: "varchar(10000)", nullable: false),
+                    DataColeta = table.Column<DateTime>(type: "varchar(100)", nullable: false),
+                    PesoAmostra = table.Column<double>(type: "varchar(40)", nullable: false),
+                    Profundidade = table.Column<int>(type: "varchar(50)", nullable: false),
+                    Sazonalidade = table.Column<bool>(type: "varchar(100)", nullable: false),
+                    TempodeRepouso = table.Column<int>(type: "varchar(30)", nullable: false),
+                    TipodeEcossistema = table.Column<string>(type: "varchar(200)", nullable: false),
+                    TipodeTratamento = table.Column<string>(type: "varchar(10000)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -73,17 +73,31 @@ namespace SGRB.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Pesquisador",
+                columns: table => new
+                {
+                    PesquisadorId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    InstituicaoDeEnsino = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Nome = table.Column<string>(type: "varchar(200)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pesquisador", x => x.PesquisadorId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ProcessamentodeAmostra",
                 columns: table => new
                 {
                     ProcessamentoAmostraId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    DescricaoProcedimento = table.Column<string>(nullable: true),
-                    Peneira = table.Column<int>(nullable: false),
-                    PeriodoIncubacao = table.Column<DateTime>(nullable: false),
-                    Refrigeracao = table.Column<double>(nullable: false),
-                    Solucoes = table.Column<string>(nullable: true),
-                    TipodeArmazenamento = table.Column<string>(nullable: true)
+                    DescricaoProcedimento = table.Column<string>(type: "varchar(8000)", nullable: false),
+                    Peneira = table.Column<int>(type: "varchar(10)", nullable: false),
+                    PeriodoIncubacao = table.Column<DateTime>(type: "varchar(50)", nullable: false),
+                    Refrigeracao = table.Column<double>(type: "varchar(30)", nullable: false),
+                    Solucoes = table.Column<string>(type: "varchar(3000)", nullable: false),
+                    TipodeArmazenamento = table.Column<string>(type: "varchar(5000)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -104,6 +118,9 @@ namespace SGRB.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "MateriaiseEquipamentos");
+
+            migrationBuilder.DropTable(
+                name: "Pesquisador");
 
             migrationBuilder.DropTable(
                 name: "ProcessamentodeAmostra");
